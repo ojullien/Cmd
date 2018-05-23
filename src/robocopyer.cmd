@@ -1,5 +1,3 @@
-@echo OFF
-setlocal enableextensions enabledelayedexpansion
 :: File Name  : robocopyer.cmd
 :: Description: Command-line directory replication command.
 :: Version    : 1.0.0
@@ -8,25 +6,43 @@ setlocal enableextensions enabledelayedexpansion
 :: Website    : https://github.com/ojullien
 :: Requires   : Microsoft Windows [version 6.1.7601], Robocopy from Microsoft Sysinternals
 :: License    : MIT (https://github.com/ojullien/Cmd/blob/master/LICENSE).
+@echo OFF
+setlocal enableextensions disabledelayedexpansion
 
 :init
-if [%1]==[""] (set /p _Source="Enter source: ") else set _Source=%1
-if [%2]==[""] (set /p _Destination="Enter destination: ") else set _Destination=%2
-if [%3]==[""] (set _LOG="C:\Temp") else set _LOG=%3
-echo ----------------------------------------------------------------------
 set _BIN="C:\Windows\System32\robocopy.exe"
-title Robocopy %_Source% to %_Destination% ...
-if not exist %_BIN% call :exitOnMissingError %_BIN%
-if not exist %_LOG% call :exitOnMissingError %_LOG%
-if not exist %_Source% call :exitOnMissingError %_Source%
-echo Robocopy %_Source% to %_Destination% with log file in: %_LOG% ...
-echo ----------------------------------------------------------------------
+if not exist %_BIN% call :exitOnError %_BIN% is missing !!!
+
+if [%1] EQU [/?] call :exitOnError Usage: %~nx0 "source directory" "destination directory" "log directory" (default c:\temp)
+
+if [%1] EQU [] (set /p "_Source=Enter source:") else (set _Source=%1)
+if not exist %_Source% call :exitOnError %_Source% does not exist !!!
+
+if [%2] EQU [] (set /p "_Destination=Enter destination:") else (set _Destination=%2)
+if not exist %_Destination% mkdir %_Destination%
+
+if [%3] EQU [] (set "_LogDir=C:\Temp") else (set _LogDir=%3)
+if not exist "%_LogDir%" mkdir %_LogDir%
 
 :main
+echo ----------------------------------------------------------------------
+call :rob %_Source% %_Destination% %_LogDir%
+ENDLOCAL
 pause
 goto:EOF
 
-:exitOnMissingError
-echo ERROR: %1 does not exist !!! Aborting ...
+:rob
+title Robocopy "%~n1" to "%~2" ...
+echo Robocopy "%~n1" to "%~2" with log file in: "%~3" ...
+set _LogFile=%~3\robocopy-%~n1.log
+del /F /S /Q "%_LogFile%"
+%_BIN% "%~1" "%~2" /Z /MIR /DST /R:3 /W:5 /X /V /FP /NS /NP /TEE /log:"%_LogFile%"
+goto:EOF
+
+:exitOnError
+echo:
+echo %*
+echo:
+ENDLOCAL
 pause
-EXIT /B 0
+EXIT
