@@ -4,7 +4,8 @@ Personal Windows command line scripting projects.
 
 ## Setup & usage
 
-Copy each file or add a link to C:\Users\<username>\AppData\Roaming\Microsoft\Windows\SendTo
+* You can Copy each file or add a link to C:\Users\<username>\AppData\Roaming\Microsoft\Windows\SendTo
+* Or you can run the script in a CMD shell.
 
 Require Windows version: 6.1
 
@@ -63,7 +64,7 @@ Require VBoxManage.exe from VirtualBox.
 
 Copy the file or add a link to C:\Users\<username>\AppData\Roaming\Microsoft\Windows\SendTo.
 
-compactvdi.cmd can also be run in a CMD shell.
+vmdk2vdi.cmd can also be run in a CMD shell.
 
 ```batchfile
 C:\Cmd\src> vmdk2vdi.cmd "virtual machine directory"
@@ -73,9 +74,7 @@ C:\Cmd\src> vmdk2vdi.cmd "virtual machine directory"
 
 Thanks you for taking the time to contribute.
 
-As this project is a personal project, I do not have time to develop new submitted features or feature requests.
-
-But if you encounter any **bugs**, please open an [issue](https://github.com/ojullien/cmd/issues/new).
+As this project is a personal project, I do not have time to develop new submitted features or feature requests. But if you encounter any **bugs**, please open an [issue](https://github.com/ojullien/cmd/issues/new).
 
 Be sure to include a title and clear description,as much relevant information as possible, and a code sample or an executable test case demonstrating the expected behavior that is not occurring.
 
