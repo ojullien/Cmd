@@ -21,22 +21,27 @@ if [%1] EQU [/?] call :exitOnError Usage: %~nx0 "file to compress"
 if [%1] EQU [] (set /p "_Source=Enter source:") else (set _Source=%1)
 if not exist %_Source% call :exitOnError %_Source% does not exist !!!
 
-if [%2] EQU [] (set _Destination=%~dp1\%~n1) else (set _Destination=%~dp1)
+set "_Filename=%_CurrentDate%%_CurrentTime%"
+if [%2] EQU [] ( call :getPathAndFilename %_Source% _Filename ) else ( call :getParentPath %_Source% _Filename )
 
 :main
 echo ----------------------------------------------------------------------
-echo %_Destination%
-::call :cont %_Source%
+set _Destination=%_Filename%.%_CurrentDate%%_CurrentTime%.zip
+title Zipping to "%_Destination%" ...
+echo Zipping to "%_Destination%" ...
+%_BIN% a "%_Destination%" %* -mx9
 pause
 goto:EOF
 
-:getDestination
+:getParentPath
+set "_ParentDir=%~dp1"
+set _ParentDir=%_ParentDir:~0,-1%
+call :getPathAndFilename "%_ParentDir%" _ParentDir
+set "%~2=%_ParentDir%"
+goto:EOF
 
-
-:cont
-::title Defragments recursively all files located in "%~n1" ...
-echo Defragments recursively all files located in "%~n1" ...
-::%_BIN% -s -q "%~f1"
+:getPathAndFilename
+set "%~2=%~dp1%~n1"
 goto:EOF
 
 :exitOnError

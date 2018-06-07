@@ -70,6 +70,20 @@ vmdk2vdi.cmd can also be run in a CMD shell.
 C:\Cmd\src> vmdk2vdi.cmd "virtual machine directory"
 ```
 
+### ziptimestamper.cmd
+
+Compress file(s) or folder(s) and add a timestamp to the archive name.
+
+Require 7-zip
+
+Copy the file or add a link to C:\Users\<username>\AppData\Roaming\Microsoft\Windows\SendTo.
+
+ziptimestamper.cmd can also be run in a CMD shell.
+
+```batchfile
+C:\Cmd\src> ziptimestamper.cmd "file to compress"
+```
+
 ## Contributing
 
 Thanks you for taking the time to contribute.
