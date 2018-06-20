@@ -38,6 +38,26 @@ contiger.cmd can also be run in a CMD shell.
 C:\Cmd\src> contiger.cmd "directory path"
 ```
 
+### logbuilder-month.cmd
+
+Build monthly apache log files from daily log. Very specific to my projects. Edit the file to change variables.
+
+Mus be run in a CMD shell.
+
+```batchfile
+C:\Cmd\src> logbuilder-month.cmd
+```
+
+### logbuilder-year.cmd
+
+Build yearly apache log files from monthly log. Very specific to my projects. Edit the file to change variables.
+
+Mus be run in a CMD shell.
+
+```batchfile
+C:\Cmd\src> logbuilder-year.cmd
+```
+
 ### robocopyer.cmd
 
 Robust directory replication command with robocopy tool.
