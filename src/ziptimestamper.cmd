@@ -1,8 +1,8 @@
 :: File Name  : ziptimestamper.cmd
 :: Description: Compress file or folder and add a timestamp to the name.
 ::              Use 7zip to compress. The archive is created in the same folder as the source.
-:: Version    : 1.0.0
-:: Date       : 2013-03-22
+:: Version    : 1.1.0
+:: Date       : 2017-06-28
 :: Author     : Olivier Jullien
 :: Website    : https://github.com/ojullien
 :: Requires   : Microsoft Windows [version 6.1.7601], Contig from Microsoft Sysinternals

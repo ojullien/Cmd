@@ -2,8 +2,8 @@
 :: Description: compact disk images, i.e. remove blocks that only contains zeroes.
 ::              This will shrink a dynamically allocated image again; it will reduce the physical size of the image
 ::              without affecting the logical size of the virtual disk.
-:: Version    : 1.0.0
-:: Date       : 2015-11-25
+:: Version    : 1.1.0
+:: Date       : 2017-06-28
 :: Author     : Olivier Jullien
 :: Website    : https://github.com/ojullien
 :: Requires   : Microsoft Windows [version 6.1.7601], VirtualBox

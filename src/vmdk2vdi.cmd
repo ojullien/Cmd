@@ -1,7 +1,7 @@
 :: File Name  : vmdk2vdi.cmd
 :: Description: duplicates a virtual vmdk disk medium to a new VDI image file with a new unique identifier (UUID).
-:: Version    : 1.0.0
-:: Date       : 2015-11-25
+:: Version    : 1.1.0
+:: Date       : 2017-06-28
 :: Author     : Olivier Jullien
 :: Website    : https://github.com/ojullien
 :: Requires   : Microsoft Windows [version 6.1.7601], VirtualBox

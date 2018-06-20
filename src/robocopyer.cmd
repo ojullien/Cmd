@@ -1,7 +1,7 @@
 :: File Name  : robocopyer.cmd
 :: Description: Command-line directory replication command.
-:: Version    : 1.0.0
-:: Date       : 2015-11-25
+:: Version    : 1.1.0
+:: Date       : 2017-06-28
 :: Author     : Olivier Jullien
 :: Website    : https://github.com/ojullien
 :: Requires   : Microsoft Windows [version 6.1.7601], Robocopy from Microsoft Sysinternals

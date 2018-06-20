@@ -42,7 +42,7 @@ C:\Cmd\src> contiger.cmd "directory path"
 
 Build monthly apache log files from daily log. Very specific to my projects. Edit the file to change variables.
 
-Mus be run in a CMD shell.
+Must be run in a CMD shell.
 
 ```batchfile
 C:\Cmd\src> logbuilder-month.cmd
@@ -52,7 +52,7 @@ C:\Cmd\src> logbuilder-month.cmd
 
 Build yearly apache log files from monthly log. Very specific to my projects. Edit the file to change variables.
 
-Mus be run in a CMD shell.
+Must be run in a CMD shell.
 
 ```batchfile
 C:\Cmd\src> logbuilder-year.cmd

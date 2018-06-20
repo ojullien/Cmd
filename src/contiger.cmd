@@ -3,8 +3,8 @@
 ::              Contig is a single-file defragmenter that attempts to make files contiguous on disk. Its perfect for
 ::              quickly optimizing files that are continuously becoming fragmented, or that you want to ensure are in as
 ::              few fragments as possible.
-:: Version    : 1.0.0
-:: Date       : 2015-11-25
+:: Version    : 1.1.0
+:: Date       : 2017-06-28
 :: Author     : Olivier Jullien
 :: Website    : https://github.com/ojullien
 :: Requires   : Microsoft Windows [version 6.1.7601], Contig from Microsoft Sysinternals
