@@ -6,6 +6,7 @@ Personal Windows command line scripting projects.
 
 - [Setup](#setup)
 - [Features](#features)
+- [Test](#test)
 - [Contributing](#contributing)
 - [License](#license)
 
