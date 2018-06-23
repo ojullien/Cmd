@@ -2,12 +2,21 @@
 
 Personal Windows command line scripting projects.
 
-## Setup & usage
+## Table of Contents
+
+- [Setup](#setup)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Setup
 
 * You can Copy each file or add a link to C:\Users\<username>\AppData\Roaming\Microsoft\Windows\SendTo
 * Or you can run the script in a CMD shell.
 
 Require Windows version: 6.1
+
+## Features
 
 ### compactvdi.cmd
 
